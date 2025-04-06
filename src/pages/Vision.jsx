@@ -8,7 +8,7 @@ export default function Homepage() {
       </h1>
 
       <main className="main-content">
-                <h2 className="book-title">Keep Going</h2>
+        <h2 className="book-title">Keep Going</h2>
         <h3 className="book-subtitle subtitle-glow">Raised in Shadows, Chasing the Light</h3>
         <div className="book-stack">
           <img
@@ -22,14 +22,24 @@ export default function Homepage() {
             rel="noopener noreferrer"
             className="amazon-button"
           >
-            Buy on Amazon
+            📘 Preview & Buy on Amazon
           </a>
-          <p className="intro-highlight">
-            If you found yourself here, there's a reason.
-          </p>
         </div>
 
-        
+        <div className="book-intro">
+  <p className="intro-highlight">
+    If you found yourself here, there's a reason.
+  </p>
+  <p className="book-description new-font">
+    Being held at knifepoint by a family member was the breaking point.<br /><br />
+    I packed one suitcase, had zero dollars to my name, and jumped headfirst into a toxic relationship with a girl 1,500 miles away from everything I knew.<br /><br />
+    This is the story of what happens next.<br />
+    Of chasing healing while still bleeding.<br />
+    Of learning to navigate life without a map, family, or foundation.<br /><br />
+    Who do you call when you have no one at all?<br />
+    <em>Keep Going: Raised in Shadows, Chasing the Light</em> is a memoir for anyone who's ever felt alone in the dark—and needed a reason to keep moving forward.
+  </p>
+</div>
         <hr className="divider" />
       </main>
 

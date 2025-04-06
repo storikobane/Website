@@ -4,6 +4,7 @@
   --accent: #ff6b3c;
   --muted: #aaaaaa;
   --divider: #333333;
+  --white: #ffffff;
 }
 
 body {
@@ -13,6 +14,7 @@ body {
   color: var(--text);
   font-family: 'Segoe UI', sans-serif;
   text-align: center;
+  font-weight: bold;
 }
 
 .app {
@@ -64,37 +66,41 @@ body {
   }
 }
 
-/* Book Title + Subtitle */
+/* Book Title + Subtitle + Glow */
 .book-title {
   font-size: 3rem;
   font-weight: 800;
   margin-top: 2rem;
   margin-bottom: 0.5rem;
+  color: var(--white);
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.4), 0 0 20px rgba(255, 255, 255, 0.2);
 }
 
-.book-subtitle {
+.subtitle-glow {
   font-family: 'Cormorant Garamond', serif;
   font-style: italic;
   font-size: 1.5rem;
   margin-bottom: 1.5rem;
-  color: var(--muted);
+  color: var(--white);
+  font-weight: bold;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.3), 0 0 15px rgba(255, 255, 255, 0.2);
 }
 
-/* Description Text */
-.book-description {
-  font-size: 1.1rem;
-  max-width: 700px;
-  margin: 2rem auto;
-  line-height: 1.6;
-  color: var(--muted);
+/* Book stack (cover + button + highlight) */
+.book-stack {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+  margin-bottom: 2rem;
 }
 
-.updated-font {
-  font-family: 'Georgia', serif;
-  font-style: normal;
+.book-cover {
+  width: 220px;
+  max-width: 80%;
+  border-radius: 12px;
 }
 
-/* Amazon Button */
 .amazon-button {
   display: inline-block;
   background-color: var(--accent);
@@ -111,12 +117,13 @@ body {
   background-color: #ffa97b;
 }
 
-/* Book Cover */
-.book-cover {
-  width: 220px;
-  max-width: 80%;
-  border-radius: 12px;
-  margin-bottom: 1.25rem;
+.intro-highlight {
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 1rem;
+  text-shadow: 0 0 6px rgba(255, 255, 255, 0.4), 0 0 12px rgba(255, 255, 255, 0.3);
 }
 
 /* Divider */
@@ -165,19 +172,46 @@ body {
   color: var(--background);
 }
 
+/* Donation message */
+.donation-message {
+  color: var(--muted);
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  font-style: italic;
+}
+
+/* Contact */
+.contact-section {
+  margin: 2rem 0 4rem;
+}
+
+.contact-button {
+  display: inline-block;
+  background-color: transparent;
+  color: var(--white);
+  border: 2px solid var(--white);
+  padding: 0.5rem 1.25rem;
+  border-radius: 6px;
+  font-weight: bold;
+  text-decoration: none;
+  margin-top: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.contact-button:hover {
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.3);
+  border-color: var(--white);
+}
+
 /* Mobile Scaling */
 @media (max-width: 768px) {
   .book-title {
     font-size: 2rem;
   }
 
-  .book-subtitle {
+  .subtitle-glow {
     font-size: 1.2rem;
-  }
-
-  .book-description {
-    font-size: 1rem;
-    padding: 0 1rem;
   }
 
   .amazon-button {
@@ -194,11 +228,8 @@ body {
   .animated-header span {
     font-size: 2.5rem;
   }
-}
-.book-stack {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1.25rem;
-  margin-bottom: 2rem;
+
+  .intro-highlight {
+    font-size: 1.4rem;
+  }
 }
