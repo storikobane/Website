@@ -11,12 +11,11 @@ export default function Homepage() {
         <h2 className="book-title">Keep Going</h2>
         <h3 className="book-subtitle">Raised in Shadows, Chasing the Light</h3>
        <img
-            src="https://m.media-amazon.com/images/I/41eD8QivAOL._SY445_SX342_.jpg"
+            src="https://m.media-amazon.com/images/I/71JjlrDJ0bL._SY522_.jpg"
             alt="Keep Going Book Cover"
             className="book-cover"
           />
-     
-				<a
+       <a
           href="https://www.amazon.com/dp/B0F2MXLR8B"
           target="_blank"
           rel="noopener noreferrer"
