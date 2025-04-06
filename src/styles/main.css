@@ -21,6 +21,12 @@ body {
   padding: 2rem;
 }
 
+/* Tighten spacing around animated header */
+.tight-header {
+  padding: 1em 0;
+  margin: 0 auto 1em;
+}
+
 /* Animated Header */
 .animated-header {
   text-transform: uppercase;
@@ -28,10 +34,9 @@ body {
   display: inline-block;
   border: 4px double rgba(255, 255, 255, 0.25);
   border-width: 4px 0;
-  padding: 1.5em 0;
-  width: 100%;
   font: 400 1em/1.5 "Neuton", serif;
   color: rgba(255, 255, 255, 0.25);
+  width: 100%;
 }
 
 .animated-header span {
@@ -106,6 +111,14 @@ body {
   background-color: #ffa97b;
 }
 
+/* Book Cover */
+.book-cover {
+  width: 220px;
+  max-width: 80%;
+  border-radius: 12px;
+  margin-bottom: 1.25rem;
+}
+
 /* Divider */
 .divider {
   margin: 3rem auto;
@@ -151,9 +164,41 @@ body {
   background-color: var(--accent);
   color: var(--background);
 }
-.book-cover {
-  width: 220px;
-  max-width: 80%;
-  border-radius: 12px;
-  margin-bottom: 1.25rem;
+
+/* Mobile Scaling */
+@media (max-width: 768px) {
+  .book-title {
+    font-size: 2rem;
+  }
+
+  .book-subtitle {
+    font-size: 1.2rem;
+  }
+
+  .book-description {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+
+  .amazon-button {
+    padding: 0.65rem 1.2rem;
+    font-size: 1rem;
+  }
+
+  .book-cover {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+  }
+
+  .animated-header span {
+    font-size: 2.5rem;
+  }
+}
+.book-stack {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+  margin-bottom: 2rem;
 }
