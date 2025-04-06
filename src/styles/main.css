@@ -29,7 +29,6 @@ body {
   border: 4px double rgba(255, 255, 255, 0.25);
   border-width: 4px 0;
   padding: 1.5em 0;
-  position: relative;
   width: 100%;
   font: 400 1em/1.5 "Neuton", serif;
   color: rgba(255, 255, 255, 0.25);
@@ -60,7 +59,37 @@ body {
   }
 }
 
-/* Main Content */
+/* Book Title + Subtitle */
+.book-title {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.book-subtitle {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--muted);
+}
+
+/* Description Text */
+.book-description {
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 2rem auto;
+  line-height: 1.6;
+  color: var(--muted);
+}
+
+.updated-font {
+  font-family: 'Georgia', serif;
+  font-style: normal;
+}
+
+/* Amazon Button */
 .amazon-button {
   display: inline-block;
   background-color: var(--accent);
@@ -76,18 +105,6 @@ body {
 .amazon-button:hover {
   background-color: #ffa97b;
 }
-
-.book-description {
-  margin-top: 1rem;
-  font-size: 1.2rem;
-  font-family: "Cormorant Garamond", serif;
-  font-style: italic;
-  color: var(--muted);
-  max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 
 /* Divider */
 .divider {
@@ -133,4 +150,10 @@ body {
 .paypal-button:hover {
   background-color: var(--accent);
   color: var(--background);
+}
+.book-cover {
+  width: 220px;
+  max-width: 80%;
+  border-radius: 12px;
+  margin-bottom: 1.25rem;
 }
