@@ -1,0 +1,85 @@
+@keyframes borderGlow {
+  0% {
+    border-color: #ff6b3c;
+    box-shadow: 0 0 10px #ff6b3c, 0 0 20px #ff6b3c;
+  }
+  50% {
+    border-color: #ffa97b;
+    box-shadow: 0 0 15px #ffa97b, 0 0 30px #ffa97b;
+  }
+  100% {
+    border-color: #ff6b3c;
+    box-shadow: 0 0 10px #ff6b3c, 0 0 20px #ff6b3c;
+  }
+}
+
+.signed-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: linear-gradient(145deg, #1a1a1a, #0e0e0e);
+  border: 2px solid #ff6b3c;
+  border-radius: 12px;
+  animation: borderGlow 3s ease-in-out infinite;
+}
+
+
+.signed-form input,
+.signed-form textarea {
+  padding: 0.85rem 1rem;
+  border: 1px solid #333;
+  border-radius: 8px;
+  background-color: #121212;
+  color: #ffffff;
+  font-size: 1rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.signed-form input:focus,
+.signed-form textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 10px var(--accent);
+}
+
+.signed-form input::placeholder,
+.signed-form textarea::placeholder {
+  color: #888;
+}
+
+.signed-form button {
+  background-color: var(--accent);
+  color: var(--background);
+  font-weight: bold;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.signed-form button:hover {
+  background-color: #ffa97b;
+  transform: scale(1.02);
+}
+
+.confirmation {
+  text-align: center;
+  max-width: 600px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background-color: #121212;
+  border: 2px solid #ff6b3c;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.1);
+  animation: borderGlow 3s ease-in-out infinite;
+}
+
+.confirmation p {
+  font-size: 1.2rem;
+  color: var(--muted);
+  margin-bottom: 1.5rem;
+}
