@@ -24,18 +24,21 @@ export default function SignedCopy() {
         <span>Order Signed Copy</span>
       </h1>
 
-      <main className="main-content">
-        {!submitted ? (
-          <>
-            <form className="signed-form" onSubmit={handleSubmit}>
-            <input type="text" name="name" placeholder="Full Name" required />
-            <input type="email" name="email" placeholder="Email Address" required />
-            <textarea name="address" placeholder="Shipping Address" required></textarea>
-            <input type="text" name="signTo" placeholder="Who should I sign it to? (Optional)" />
-            <textarea name="message" placeholder="Optional message or notes"></textarea>
-            <button type="submit" className="amazon-button">Continue</button>
-          </form>
-          </>
+     <main className="main-content">
+  {!submitted ? (
+    <>
+      <p className="shipping-notice">
+        Please note: Once your order is received, I’ll purchase the book, have it shipped to me, sign it, and mail it out to you. Delivery can take 4–10 days.
+      </p>
+      <form className="signed-form" onSubmit={handleSubmit}>
+        <input type="text" name="name" placeholder="Full Name" required />
+        <input type="email" name="email" placeholder="Email Address" required />
+        <textarea name="address" placeholder="Shipping Address" required></textarea>
+        <input type="text" name="signTo" placeholder="Who should I sign it to? (Optional)" />
+        <textarea name="message" placeholder="Optional message or notes"></textarea>
+        <button type="submit" className="amazon-button">Continue</button>
+      </form>
+    </>
 
         ) : (
           <div className="confirmation">

@@ -32,9 +32,10 @@ export default function Homepage() {
           <div className="signed-copy-section">
             <h3>Want a Signed Copy?</h3>
             <p>Fill out the form and pay securely to order a signed version of the book.</p>
-            <Link to="/signedcopy" className="amazon-button">
-              Order Signed Copy
+            <Link to="/signedcopy" className="amazon-button glow-button">
+               Order Signed Copy
             </Link>
+
           </div>
         </div>
 
